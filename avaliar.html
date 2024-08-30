@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar Animação em Bolha</title>
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <link rel="stylesheet" href="assets/styles/formstyle.css" />
+    <link rel="stylesheet" href="assets/styles/avaliar.css" />
+    <script defer src="assets/js/navbar.js"></script>
+    <script src="assets/js/avaliar.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <img class="logo" src="assets/img/logo.png" alt="logo-unimar" />
+        <button class="hamburger"></button>
+        <ul class="nav-list">
+          <li><a href="#">Universo Unimar</a></li>
+          <li><a href="#">Ensino a Distância</a></li>
+          <li><a href="#">Educação Continuada</a></li>
+          <li><a href="#">Pesquisa</a></li>
+          <li><a href="#">Extensão</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+        <a href="" class="btn">Vestibular</a>
+        <a href="" class="btn">login</a>
+      </nav>
+    </header>
+
+    <main class="slogan">
+      <div class="container">
+        <div class="float-line"></div>
+        <img src="assets/img/Dra.Unimar.png" class="dra" alt="médica" />
+        <div class="text-box">
+          <div class="text-div">
+            <h1>
+              Sua experiência molda o nosso futuro. Dê-nos seu feedback e
+              ajude-nos a transformar a saúde.
+            </h1>
+            <p>
+              Preencha nosso formulário de feedback para nos ajudar a melhorar
+              continuamente nossos serviços. Sua opinião é essencial para
+              garantir uma experiência de excelência.
+            </p>
+          </div>
+        </div>
+        <div class="slogan-box">
+          <h1>
+            <b>#</b> MED <br />
+            &#160; <i> &#160;2024</i>
+          </h1>
+        </div>
+      </div>
+    </main>
+
+    <div class="limiter">
+      <div class="container-login100">
+        <div class="wrap-login100">
+          <form class="login100-form validate-form">
+            <h1>Galeria de Imagens</h1>
+            <div class="image-gallery">
+              <img
+                src="https://lcpasolucoes.com.br/wp-content/uploads/2023/04/032000135642-2.jpg"
+                alt="Imagem 1"
+                class="thumbnail"
+                onclick="openModal('modal1')"
+              />
+              <img
+                src="https://static.wixstatic.com/media/7869d1_ee2366721ba74ac680bbaff8c5c6433e~mv2.jpg/v1/fill/w_640,h_374,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/7869d1_ee2366721ba74ac680bbaff8c5c6433e~mv2.jpg"
+                alt="Imagem 2"
+                class="thumbnail"
+                onclick="openModal('modal2')"
+              />
+              <img
+                src="https://blanchospital.com.br/blog/wp-content/uploads/2019/02/blanc-01.jpg"
+                alt="Imagem 3"
+                class="thumbnail"
+                onclick="openModal('modal3')"
+              />
+              <img
+                src="https://blogdasaude.com.br/wp-content/uploads/dr-andre-eyler.jpg"
+                alt="Imagem 4"
+                class="thumbnail"
+                onclick="openModal('modal4')"
+              />
+            </div>
+
+            <!-- Modais -->
+            <div id="modal1" class="modal">
+              <div class="modal-content">
+                <img
+                  src="https://lcpasolucoes.com.br/wp-content/uploads/2023/04/032000135642-2.jpg"
+                  alt="Imagem 1"
+                  class="thumbnail"
+                  onclick="openModal('modal1')"
+                />
+                <h2>Eduardo Monteio</h2>
+                <p>Ginecologista</p>
+                <p>Avalie esse funcionário:</p>
+                <form id="checkboxForm">
+                  <div class="checkbox-group">
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="option"
+                        value="opcao1"
+                        onclick="selectOnlyOne(this)"
+                      />
+                      5 Estrlas
+                    </label>
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="option"
+                        value="opcao2"
+                        onclick="selectOnlyOne(this)"
+                      />
+                      4 Estrelas
+                    </label>
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="option"
+                        value="opcao3"
+                        onclick="selectOnlyOne(this)"
+                      />
+                      3 Estrelas
+                    </label>
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="option"
+                        value="opcao4"
+                        onclick="selectOnlyOne(this)"
+                      />
+                      2 Estrelas
+                    </label>
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="option"
+                        value="opcao4"
+                        onclick="selectOnlyOne(this)"
+                      />
+                      1 Estrela
+                    </label>
+                  </div>
+                  <br>
+                  <div>
+                    <label for="">
+                      <p>Diga como foi sua experiência com essa pessoa:</p>
+                      <input class="opiniao" type="text">
+                    </label>
+                  </div>
+                </form>
+                
+                <br />
+                <button class="close" onclick="closeModal('modal1')">
+                  Finalizar avaliação
+                </button>
+              </div>
+            </div>
+
+            <div id="modal2" class="modal">
+              <div class="modal-content">
+                <img
+                  src="https://static.wixstatic.com/media/7869d1_ee2366721ba74ac680bbaff8c5c6433e~mv2.jpg/v1/fill/w_640,h_374,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/7869d1_ee2366721ba74ac680bbaff8c5c6433e~mv2.jpg"
+                  alt="Imagem 2"
+                  class="thumbnail"
+                  onclick="openModal('modal2')"
+                />
+                <h2>Amaral Fernandes</h2>
+                <p>Enfermeiro</p>
+                <form id="checkboxForm">
+                  <div class="checkbox-group">
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="option"
+                        value="opcao1"
+                        onclick="selectOnlyOne(this)"
+                      />
+                      5 Estrlas
+                    </label>
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="option"
+                        value="opcao2"
+                        onclick="selectOnlyOne(this)"
+                      />
+                      4 Estrelas
+                    </label>
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="option"
+                        value="opcao3"
+                        onclick="selectOnlyOne(this)"
+                      />
+                      3 Estrelas
+                    </label>
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="option"
+                        value="opcao4"
+                        onclick="selectOnlyOne(this)"
+                      />
+                      2 Estrelas
+                    </label>
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="option"
+                        value="opcao4"
+                        onclick="selectOnlyOne(this)"
+                      />
+                      1 Estrela
+                    </label>
+                  </div>
+                  <br>
+                  <div>
+                    <label for="">
+                      <p>Diga como foi sua experiência com essa pessoa:</p>
+                      <input class="opiniao" type="text">
+                    </label>
+                  </div>
+                </form>
+
+                
+                <br />
+                <button class="close" onclick="closeModal('modal1')">
+                  Finalizar avaliação
+                </button> 
+              </div>
+            </div>
+
+            <div id="modal3" class="modal">
+              <div class="modal-content">
+                <img
+                  src="https://blanchospital.com.br/blog/wp-content/uploads/2019/02/blanc-01.jpg"
+                  alt="Imagem 3"
+                  class="thumbnail"
+                  onclick="openModal('modal3')"
+                />
+                <h2>Jeorge Carvalho</h2>
+                <p>Ginecologista/p>
+                <form id="checkboxForm">
+                  <div class="checkbox-group">
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="option"
+                        value="opcao1"
+                        onclick="selectOnlyOne(this)"
+                      />
+                      5 Estrlas
+                    </label>
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="option"
+                        value="opcao2"
+                        onclick="selectOnlyOne(this)"
+                      />
+                      4 Estrelas
+                    </label>
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="option"
+                        value="opcao3"
+                        onclick="selectOnlyOne(this)"
+                      />
+                      3 Estrelas
+                    </label>
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="option"
+                        value="opcao4"
+                        onclick="selectOnlyOne(this)"
+                      />
+                      2 Estrelas
+                    </label>
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="option"
+                        value="opcao4"
+                        onclick="selectOnlyOne(this)"
+                      />
+                      1 Estrela
+                    </label>
+                  </div>
+                  <br>
+                  <div>
+                    <label for="">
+                      <p>Diga como foi sua experiência com essa pessoa:</p>
+                      <input class="opiniao" type="text">
+                    </label>
+                  </div>
+                </form>
+                </form>
+                <br/>
+                <button class="close" onclick="closeModal('modal1')">
+                  Finalizar avaliação
+                </button>
+              </div>
+            </div>
+
+            <div id="modal4" class="modal">
+              <div class="modal-content">
+                <img
+                src="https://blogdasaude.com.br/wp-content/uploads/dr-andre-eyler.jpg"
+                alt="Imagem 4"
+                class="thumbnail"
+                onclick="openModal('modal4')"
+              />
+                <h2>Carlos Ferreira</h2>
+                <p>Enfermeiro</p>
+                <form id="checkboxForm">
+                  <div class="checkbox-group">
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="option"
+                        value="opcao1"
+                        onclick="selectOnlyOne(this)"
+                      />
+                      5 Estrlas
+                    </label>
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="option"
+                        value="opcao2"
+                        onclick="selectOnlyOne(this)"
+                      />
+                      4 Estrelas
+                    </label>
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="option"
+                        value="opcao3"
+                        onclick="selectOnlyOne(this)"
+                      />
+                      3 Estrelas
+                    </label>
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="option"
+                        value="opcao4"
+                        onclick="selectOnlyOne(this)"
+                      />
+                      2 Estrelas
+                    </label>
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="option"
+                        value="opcao4"
+                        onclick="selectOnlyOne(this)"
+                      />
+                      1 Estrela
+                    </label>
+                  </div>
+                  <br>
+                  <div>
+                    <label for="">
+                      <p>Diga como foi sua experiência com essa pessoa:</p>
+                      <input class="opiniao" type="text">
+                    </label>
+                  </div>
+                </form>
+                </form>
+                <br />
+                <button class="close" onclick="closeModal('modal1')">
+                  Finalizar avaliação
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

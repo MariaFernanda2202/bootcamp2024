@@ -1,0 +1,276 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+
+
+  
+  .header {
+    background: #008cff;
+  }
+
+  .logo {
+    max-width: 150px;
+  }
+  
+  .nav {
+    max-width: 80%;
+    height: 70px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 48px;
+  }
+  
+  .nav-list {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+  }
+
+ 
+
+  .btn {
+    z-index: 100;
+    max-width: 150px;
+    padding: 5px 15px;
+    background-color: #00D8FF;
+    transition: 200ms;
+    border-radius: 20px;
+    border: 1px solid #00d9ff00;
+    color: #008cff;
+  }
+
+  .btn:hover {
+    background-color: #00d9ff00;
+    border: 1px solid #00D8FF;
+    color: #fff;
+  }
+
+  .btn-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    max-width: 150px;
+    padding: 5px 15px;
+    background-color: #0072bb;
+    color: #fff;
+    transition: 200ms;
+    border-radius: 20px;
+  }
+
+  .btn-2:hover {
+    background-color: #0073bb93;
+    color: #ffffffa4;
+  }
+  
+  .nav-list a {
+    font-size: 0.8rem;
+    color: #fff;
+    padding-block: 16px;
+    transition: 200ms;
+    font-weight: 300;
+  }
+
+  .nav-list a:hover {
+    color: #00D8FF;
+  }
+  
+  .hamburger {
+    display: none;
+    border: none;
+    background: none;
+    border-top: 3px solid #fff;
+    cursor: pointer;
+  }
+  
+  .hamburger::after,
+  .hamburger::before {
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    margin-top: 5px;
+    position: relative;
+    transition: 0.3s;
+  }
+  
+  @media (max-width: 750px) {
+    .hamburger {
+      display: block;
+      z-index: 1;
+    }
+  
+    .nav-list {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #008cff;
+      clip-path: circle(100px at 90% -15%);
+      transition: 1s ease-out;
+  
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      gap: 0;
+  
+      pointer-events: none;
+    }
+  
+    .nav-list a {
+      font-size: 24px;
+      opacity: 0;
+    }
+  
+    .nav-list li:nth-child(1) a {
+      transition: 0.5s 0.2s;
+    }
+  
+    .nav-list li:nth-child(2) a {
+      transition: 0.5s 0.4s;
+    }
+  
+    .nav-list li:nth-child(3) a {
+      transition: 0.5s 0.6s;
+    }
+  
+    .nav.active .nav-list {
+      clip-path: circle(1500px at 90% -15%);
+      pointer-events: all;
+    }
+  
+    .nav.active .nav-list a {
+      opacity: 1;
+    }
+  
+    .nav.active .hamburger {
+      position: fixed;
+      top: 26px;
+      right: 16px;
+      border-top-color: transparent;
+    }
+  
+    .nav.active .hamburger::before {
+      transform: rotate(135deg);
+    }
+  
+    .nav.active .hamburger::after {
+      transform: rotate(-135deg);
+      top: -7px;
+    }
+  }
+
+  .slogan {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-image: url(/assets/img/hospital.jpg);
+    background-size: cover;
+  }
+
+  .container {
+    width: 80%;
+    position: relative;
+    height: calc(100vh - 70px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .dra {
+    width: 80%;
+    bottom: 0;
+    left: 150px;
+    position: absolute;
+    z-index: 200;
+  }
+
+  .text-box {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: #0072bb;
+  }
+
+  .text-box p {
+    font-size: 17px;
+    line-height: 1;
+    max-width: 400px;
+    font-weight: 400;
+  }
+
+  .text-div {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .text-box h1 {
+    font-size: 44px;
+    line-height: 1;
+    max-width: 450px;
+  }
+
+  .slogan-box {
+    z-index: 100;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to top, #0072bb, #5db4fb);
+  }
+
+
+  .slogan-box h1 {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    white-space: nowrap; 
+    margin-top: 100px;
+    margin-left: 100px;
+    font-weight: 900;
+    color: #eeeded;
+    background-clip: text;
+    font-size: 10em;
+    line-height: 1;
+
+    & i {
+        font-weight: 300;
+    }
+
+    & b {
+        color: #00D8FF !important;
+    }
+  }
+
+.float-line {
+    right: -500px;
+    width: 500px;
+    height: 100%;
+    background: linear-gradient(to top, #0072bb, #5db4fb);
+    position: absolute;
+    z-index: 0; 
+}
